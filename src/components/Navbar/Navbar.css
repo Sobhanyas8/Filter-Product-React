@@ -1,0 +1,137 @@
+header {
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+}
+.headerContainer {
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.LogoSection {
+  flex: 1;
+  height: 100%;
+  color: blueviolet;
+  display: flex;
+  align-items: center;
+  font-family: "Tilt Prism", cursive;
+  padding-left: 2rem;
+}
+
+.NavbarSection {
+  flex: 3;
+  height: 100%;
+}
+
+@media screen and (min-width: 1080px) {
+  .burgermenu {
+    display: none !important;
+  }
+  .NavbarMobile {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .NavbarSection {
+    flex: 2;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .headerContainer {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .Navbar {
+    display: none !important;
+  }
+  .NavbarMobile {
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 1rem; */
+    height: 340px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 2.5rem;
+  }
+  .NavbarMobile > .NavItem.Active::after {
+    width: 0;
+    height: 0;
+  }
+  .NavbarMobile > .NavItem.Active {
+    color: blueviolet ;
+    background-color: rgba(255, 255, 255, 0.723);
+    padding: 1rem 0 1rem 2rem;
+
+  }
+  .NavbarMobile > .NavItem {
+    color: #fff;
+    width: 100%;
+    padding: 1rem 0 1rem 2rem;
+  }
+}
+
+.Navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 4rem;
+}
+.NavItem {
+  position: sticky;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 2rem;
+}
+.NavItem.Active {
+  color: blueviolet;
+  position: relative;
+}
+.NavItem.Active::after {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: blueviolet;
+  transition: all 0.4s ease;
+}
+
+.NavItem:hover {
+  color: blueviolet;
+  transition: all 0.4s ease;
+}
+.NavItem::after {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 1.5px;
+  background-color: blueviolet;
+  transition: all 0.4s ease;
+}
+.NavItem:hover::after {
+  width: 100%;
+}

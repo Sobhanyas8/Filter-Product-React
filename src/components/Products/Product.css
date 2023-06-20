@@ -1,0 +1,58 @@
+.cardContainerOuter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: absolute;
+    top: 8rem; */
+}
+
+.cardContainer {
+    display: grid;
+    padding: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    max-width: 1500px;
+}
+
+.cards {
+    width: 300px;
+    height: 400px;
+    border-radius: 1.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.1rem;
+    box-shadow: 0 1px 5px 1.5px rgba(0, 45, 248, 0.4);
+    cursor: pointer;
+}
+.cards:hover{
+    box-shadow: 0 1px 5px 2.5px rgba(248, 0, 240, 0.4);
+}
+
+.cards img {
+      width: 300px;
+      height: 300px;
+      border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.cards p {
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1300px) {
+    .cardContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .cardContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .cardContainer {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
